@@ -45,7 +45,7 @@ def Main():
         return "invalid"
     for file in dir_items:
         f_name,f_ext = os.path.splitext(file)
-        curr_path = path + "\\Peak_Data\\" + file
+        curr_path = path + path_mod+"Peak_Data"+path_mod + file
         read_file = pd.read_csv (r''+curr_path, delimiter = '\t')
         read_file.to_csv (r''+path + path_mod+ "Converted_Files" + path_mod+ f_name+".csv", index=None)
         
